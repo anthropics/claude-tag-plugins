@@ -24,7 +24,7 @@ before `.snowflakecomputing.com` — e.g. `xy12345.us-east-1` or an org-style `m
 export SNOWFLAKE_ACCOUNT="xy12345.us-east-1"           # your account identifier — must be real
 export SNOWFLAKE_BASE="https://${SNOWFLAKE_ACCOUNT}.snowflakecomputing.com"
 export SNOWFLAKE_TOKEN="placeholder"                   # injected by the runtime; any value works
-export SNOWFLAKE_TOKEN_TYPE="${SNOWFLAKE_TOKEN_TYPE:-OAUTH}"   # leave as provided by the runtime
+export SNOWFLAKE_TOKEN_TYPE="${SNOWFLAKE_TOKEN_TYPE:-PROGRAMMATIC_ACCESS_TOKEN}"   # leave as provided by the runtime; the injected credential is a PAT
 ```
 
 ### Helper and sanity check
