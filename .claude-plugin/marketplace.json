@@ -83,6 +83,13 @@
       "category": "project-management"
     },
     {
+      "name": "oncall",
+      "displayName": "Oncall",
+      "source": "./oncall",
+      "description": "Oncall workflows for incident and alerts channels — triage alerts, investigate from evidence, keep the incident timeline and status updates, write the handoff report, and draft the postmortem.",
+      "category": "observability"
+    },
+    {
       "name": "pagerduty",
       "displayName": "PagerDuty",
       "source": "./pagerduty",

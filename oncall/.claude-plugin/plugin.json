@@ -1,0 +1,7 @@
+{
+  "name": "oncall",
+  "version": "0.1.0",
+  "description": "Oncall workflows for @Claude in an incident or oncall channel — investigate an alert, keep a running incident timeline and status updates, write the handoff report, and draft the postmortem. Composes with the Datadog, PagerDuty, Grafana, Sentry, Jira/Linear, docs, and claude-tag-data-viz plugins.",
+  "author": { "name": "Anthropic" },
+  "homepage": "https://github.com/anthropics/claude-tag-plugins"
+}

@@ -20,6 +20,7 @@ Each service is its own plugin, so a workspace can connect exactly the services 
 | **[jira](./jira)** | Search with JQL, create/transition issues, comments, sprints |
 | **[linear](./linear)** | Issues, projects, cycles, teams |
 | **[notion](./notion)** | Search, pages, databases, blocks, block children |
+| **[oncall](./oncall)** | Oncall workflows — alert triage, evidence-first investigation, incident timeline and status updates, handoff reports, postmortem drafts |
 | **[pagerduty](./pagerduty)** | Incidents, who's on-call, schedules, escalation policies, services |
 | **[redshift](./redshift)** | Run SQL, poll results, list schemas/tables |
 | **[salesforce](./salesforce)** | Query records, CRUD objects, describe schema, composite requests |
@@ -54,10 +55,11 @@ Each service plugin follows the same structure:
     └── scripts/                 # Executable helpers (where present)
 ```
 
-The two helper plugins use the same `skills/<name>/` layout but carry different
+The helper and workflow plugins use the same `skills/<name>/` layout but carry different
 content: [`claude-tag-data-viz`](./claude-tag-data-viz) ships a Python charting
-kit instead of curl scripts, and [`claude-tag-troubleshoot`](./claude-tag-troubleshoot)
-ships a slash command plus two documentation-only skills.
+kit instead of curl scripts, [`claude-tag-troubleshoot`](./claude-tag-troubleshoot)
+ships a slash command plus two documentation-only skills, and [`oncall`](./oncall)
+ships workflow skills and slash commands that compose with the service plugins.
 
 ## Authentication
 
