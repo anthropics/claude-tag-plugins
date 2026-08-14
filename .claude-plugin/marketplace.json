@@ -10,6 +10,11 @@
       "displayName": "Asana",
       "source": "./asana",
       "description": "Access Asana tasks, projects, sections, and comments — list, search, create, and update.",
+      "classification": {
+        "object_acted_on": [
+          "tickets-tasks"
+        ]
+      },
       "category": "project-management"
     },
     {
@@ -17,6 +22,13 @@
       "displayName": "Google BigQuery",
       "source": "./bigquery",
       "description": "Access Google BigQuery datasets and tables — run SQL, fetch schemas, and manage jobs.",
+      "classification": {
+        "object_acted_on": [
+          "databases",
+          "data"
+        ],
+        "work_department": "data"
+      },
       "category": "data"
     },
     {
@@ -24,6 +36,12 @@
       "displayName": "Confluence",
       "source": "./confluence",
       "description": "Access Confluence pages, spaces, and comments — search, read, create, and update content.",
+      "classification": {
+        "object_acted_on": [
+          "reference-docs",
+          "files-documents"
+        ]
+      },
       "category": "project-management"
     },
     {
@@ -31,6 +49,13 @@
       "displayName": "Datadog",
       "source": "./datadog",
       "description": "Access Datadog logs, metrics, monitors, dashboards, SLOs, events, traces, and incidents.",
+      "classification": {
+        "object_acted_on": [
+          "logs-errors",
+          "servers-cloud"
+        ],
+        "work_department": "engineering"
+      },
       "category": "observability"
     },
     {
@@ -38,6 +63,13 @@
       "displayName": "Enterprise Search",
       "source": "./enterprise-search",
       "description": "Access your company's knowledge index — search across all connected sources, read documents, and submit relevance feedback.",
+      "classification": {
+        "object_acted_on": [
+          "email-messages",
+          "files-documents",
+          "reference-docs"
+        ]
+      },
       "category": "productivity"
     },
     {
@@ -45,6 +77,11 @@
       "displayName": "Google Drive",
       "source": "./google-drive",
       "description": "Access Google Drive files and folders — search, read, upload, share, and export Docs and Sheets.",
+      "classification": {
+        "object_acted_on": [
+          "files-documents"
+        ]
+      },
       "category": "productivity"
     },
     {
@@ -52,6 +89,13 @@
       "displayName": "Grafana",
       "source": "./grafana",
       "description": "Access Grafana dashboards, datasource queries, alerts, annotations, and folders.",
+      "classification": {
+        "object_acted_on": [
+          "logs-errors",
+          "data"
+        ],
+        "work_department": "engineering"
+      },
       "category": "observability"
     },
     {
@@ -59,6 +103,12 @@
       "displayName": "HubSpot",
       "source": "./hubspot",
       "description": "Access HubSpot contacts, companies, deals, and tickets — search and manage CRM records.",
+      "classification": {
+        "object_acted_on": [
+          "contacts-leads"
+        ],
+        "work_department": "sales"
+      },
       "category": "crm"
     },
     {
@@ -66,6 +116,11 @@
       "displayName": "Jira",
       "source": "./jira",
       "description": "Access Jira issues, sprints, and comments — search with JQL, create, and transition issues.",
+      "classification": {
+        "object_acted_on": [
+          "tickets-tasks"
+        ]
+      },
       "category": "project-management"
     },
     {
@@ -73,6 +128,11 @@
       "displayName": "Linear",
       "source": "./linear",
       "description": "Access Linear issues, projects, cycles, and teams.",
+      "classification": {
+        "object_acted_on": [
+          "tickets-tasks"
+        ]
+      },
       "category": "project-management"
     },
     {
@@ -80,6 +140,13 @@
       "displayName": "Notion",
       "source": "./notion",
       "description": "Access Notion pages, databases, and blocks — search, read, create, and update content.",
+      "classification": {
+        "object_acted_on": [
+          "notes-memory",
+          "files-documents",
+          "reference-docs"
+        ]
+      },
       "category": "project-management"
     },
     {
@@ -87,6 +154,13 @@
       "displayName": "PagerDuty",
       "source": "./pagerduty",
       "description": "Access PagerDuty incidents, on-call schedules, escalation policies, and services.",
+      "classification": {
+        "object_acted_on": [
+          "logs-errors",
+          "tickets-tasks"
+        ],
+        "work_department": "engineering"
+      },
       "category": "observability"
     },
     {
@@ -94,6 +168,13 @@
       "displayName": "Amazon Redshift",
       "source": "./redshift",
       "description": "Access Amazon Redshift — run SQL queries, poll results, and browse schemas and tables.",
+      "classification": {
+        "object_acted_on": [
+          "databases",
+          "data"
+        ],
+        "work_department": "data"
+      },
       "category": "data"
     },
     {
@@ -101,6 +182,12 @@
       "displayName": "Salesforce",
       "source": "./salesforce",
       "description": "Access Salesforce records — run SOQL queries, create, read, update, and delete objects.",
+      "classification": {
+        "object_acted_on": [
+          "contacts-leads"
+        ],
+        "work_department": "sales"
+      },
       "category": "crm"
     },
     {
@@ -108,6 +195,13 @@
       "displayName": "Sentry",
       "source": "./sentry",
       "description": "Access Sentry issues, events, projects, releases, and stats.",
+      "classification": {
+        "object_acted_on": [
+          "logs-errors",
+          "code"
+        ],
+        "work_department": "engineering"
+      },
       "category": "observability"
     },
     {
@@ -115,6 +209,13 @@
       "displayName": "Snowflake",
       "source": "./snowflake",
       "description": "Access Snowflake — run SQL statements, poll and fetch results, and browse warehouses.",
+      "classification": {
+        "object_acted_on": [
+          "databases",
+          "data"
+        ],
+        "work_department": "data"
+      },
       "category": "data"
     },
     {
@@ -122,6 +223,13 @@
       "displayName": "Data Visualization",
       "source": "./claude-tag-data-viz",
       "description": "Compose polished charts from tabular data — PNG, SVG, or self-contained interactive HTML.",
+      "classification": {
+        "object_acted_on": [
+          "data",
+          "designs-media"
+        ],
+        "work_department": "data"
+      },
       "category": "productivity"
     },
     {
@@ -129,6 +237,11 @@
       "displayName": "Configuration & Troubleshooting",
       "source": "./claude-tag-troubleshoot",
       "description": "Guides configuration of @Claude agents — agent scopes, identity profiles, connections, repos, and instructions — and diagnoses plugin/skill loading problems from inside a running session.",
+      "classification": {
+        "object_acted_on": [
+          "claude-settings"
+        ]
+      },
       "category": "productivity"
     }
   ]
