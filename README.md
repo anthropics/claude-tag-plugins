@@ -7,6 +7,7 @@ Each service is its own plugin, so a workspace can connect exactly the services 
 
 | Plugin | What it covers |
 |--------|----------------|
+| **[adspirer](./adspirer)** | Ad campaigns on Google, Meta, LinkedIn, TikTok, Amazon & ChatGPT Ads — research keywords, create campaigns, analyze performance, optimize budgets |
 | **[asana](./asana)** | Tasks, projects, sections, comments; list, search, create/update |
 | **[bigquery](./bigquery)** | Run SQL, list datasets/tables, fetch schemas, manage jobs |
 | **[claude-tag-data-viz](./claude-tag-data-viz)** | Compose polished charts from tabular data — PNG, SVG, or self-contained interactive HTML |

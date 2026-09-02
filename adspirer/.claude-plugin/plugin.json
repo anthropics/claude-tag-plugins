@@ -1,0 +1,7 @@
+{
+  "name": "adspirer",
+  "version": "1.0.0",
+  "description": "Manage ad campaigns across Google Ads, Meta Ads, LinkedIn Ads, TikTok Ads, Amazon Ads, and ChatGPT Ads — keyword research, campaign creation, performance analysis, and budget optimization.",
+  "author": { "name": "Adspirer" },
+  "homepage": "https://www.adspirer.com"
+}
