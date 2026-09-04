@@ -23,9 +23,10 @@ options:
   -h, --help       show this help
 
 environment:
-  CONFLUENCE_BASE      https://YOURSITE.atlassian.net/wiki — required, must include /wiki
-  ATLASSIAN_EMAIL      basic-auth user; injected by the runtime, placeholder default is fine
-  ATLASSIAN_API_TOKEN  basic-auth token; injected by the runtime, placeholder default is fine
+  CONFLUENCE_BASE      required, ends in /wiki: https://YOURSITE.atlassian.net/wiki, or the gateway
+                       https://api.atlassian.com/ex/confluence/<cloud-id>/wiki for service accounts
+  ATLASSIAN_EMAIL      auth user placeholder; the runtime injects real credentials
+  ATLASSIAN_API_TOKEN  auth token placeholder; the runtime injects real credentials
 
 output:
   results on stdout — tsv with header (id, title, space, updated, url) by default, jsonl with
@@ -87,7 +88,7 @@ if [ -z "$CQL" ]; then
   CQL="$(cat)"
 fi
 if [ -z "${CQL//[[:space:]]/}" ]; then err "no cql given"; exit 1; fi
-[ -n "$BASE" ] || { err "set CONFLUENCE_BASE (https://YOURSITE.atlassian.net/wiki)"; exit 1; }
+[ -n "$BASE" ] || { err "set CONFLUENCE_BASE (https://YOURSITE.atlassian.net/wiki or https://api.atlassian.com/ex/confluence/<cloud-id>/wiki)"; exit 1; }
 BASE="${BASE%/}"
 
 if [ -n "$SPACE" ]; then CQL="space = ${SPACE} AND (${CQL})"; fi
