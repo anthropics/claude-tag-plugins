@@ -1,6 +1,6 @@
 {
   "name": "confluence",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Access Confluence pages, spaces, and comments — search, read, create, and update content.",
   "author": { "name": "Anthropic" },
   "homepage": "https://github.com/anthropics/claude-tag-plugins"

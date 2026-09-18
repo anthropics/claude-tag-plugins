@@ -26,9 +26,10 @@ options:
   -h, --help       show this help
 
 environment:
-  JIRA_BASE            site root, e.g. https://your-domain.atlassian.net (required)
-  ATLASSIAN_EMAIL      basic-auth user; injected by the runtime, placeholder default is fine
-  ATLASSIAN_API_TOKEN  basic-auth token; injected by the runtime, placeholder default is fine
+  JIRA_BASE            base url (required): site root https://your-domain.atlassian.net, or the
+                       gateway https://api.atlassian.com/ex/jira/<cloud-id> for service accounts
+  ATLASSIAN_EMAIL      auth user placeholder; the runtime injects real credentials
+  ATLASSIAN_API_TOKEN  auth token placeholder; the runtime injects real credentials
 
 output:
   issues on stdout — tsv with header (key, summary, status, assignee, updated) by default, or the
@@ -89,7 +90,7 @@ if [ -z "$JQL" ]; then
 fi
 if [ -z "${JQL//[[:space:]]/}" ]; then err "no jql given"; exit 1; fi
 if [ -z "$BASE" ]; then
-  err "set JIRA_BASE (e.g. https://your-domain.atlassian.net)"; exit 1
+  err "set JIRA_BASE (e.g. https://your-domain.atlassian.net or https://api.atlassian.com/ex/jira/<cloud-id>)"; exit 1
 fi
 BASE="${BASE%/}"
 

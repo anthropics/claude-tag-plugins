@@ -1,6 +1,6 @@
 {
   "name": "jira",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Access Jira issues, sprints, and comments — search with JQL, create, and transition issues.",
   "author": { "name": "Anthropic" },
   "homepage": "https://github.com/anthropics/claude-tag-plugins"

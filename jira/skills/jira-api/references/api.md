@@ -1,11 +1,12 @@
 # Jira Cloud REST API — Endpoint Reference
 
-All requests go to `${JIRA_BASE}` (your site, e.g. `https://your-domain.atlassian.net`) with:
+All requests go to `${JIRA_BASE}` — either the site (`https://your-domain.atlassian.net`) or, for
+service-account tokens, the API gateway (`https://api.atlassian.com/ex/jira/<cloud-id>`) — with:
 
 ```
-Authorization: Basic <base64(email:api_token)>      # curl -u handles this for you
+Authorization: ...              # injected by the runtime (Basic for site tokens, Bearer for gateway/service-account tokens)
 Accept: application/json
-Content-Type: application/json                      # on any request with a body
+Content-Type: application/json  # on any request with a body
 ```
 
 Platform API is under `/rest/api/3/`; Agile API is under `/rest/agile/1.0/`. Official docs:
@@ -256,6 +257,7 @@ change if an issue is moved between projects; the numeric `id` is stable.
 **Custom fields.** All custom fields appear as `customfield_NNNNN`. Get the mapping via
 `/rest/api/3/field`. The `id` is stable; the display name isn't.
 
-**Cloud vs Server.** Server/Data Center uses `/rest/api/2/`, Basic auth with username+password or a
-PAT (`Authorization: Bearer`), plain-text `description`/comments (wiki markup, not ADF), and `name`
-instead of `accountId` for users. This doc targets Cloud.
+**Cloud vs Server.** Server/Data Center uses `/rest/api/2/`, username+password or PAT auth,
+plain-text `description`/comments (wiki markup, not ADF), and `name` instead of `accountId` for
+users. (On Cloud, `Authorization: Bearer` is also how service-account tokens authenticate — via the
+`api.atlassian.com` gateway — so Bearer alone doesn't indicate Server/DC.) This doc targets Cloud.
