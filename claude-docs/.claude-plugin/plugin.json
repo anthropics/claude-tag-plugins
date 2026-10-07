@@ -1,0 +1,15 @@
+{
+  "name": "claude-docs",
+  "version": "0.1.0",
+  "description": "Write documents meant for other people, such as a spec, a proposal, or a write-up, in Claude Docs. Claude gives you the doc's link when it's drafted.",
+  "author": {
+    "name": "Anthropic"
+  },
+  "keywords": [
+    "claude-docs",
+    "docs",
+    "documents",
+    "mcp",
+    "tag"
+  ]
+}

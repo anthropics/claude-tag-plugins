@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "Claude_Docs": {
+      "type": "http",
+      "url": "https://api.anthropic.com/v1/pages/mcp",
+      "headers": {
+        "X-MCP-Server-ID": "1a59c906-04da-521d-bda7-7f71b9f9e01c"
+      },
+      "alwaysLoad": false
+    }
+  }
+}
