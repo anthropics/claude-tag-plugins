@@ -137,6 +137,13 @@
       "source": "./claude-tag-troubleshoot",
       "description": "Guides configuration of @Claude agents — agent scopes, identity profiles, connections, repos, and instructions — and diagnoses plugin/skill loading problems from inside a running session.",
       "category": "productivity"
+    },
+    {
+      "name": "claude-docs",
+      "displayName": "Claude Docs",
+      "source": "./claude-docs",
+      "description": "Write documents meant for other people — specs, proposals, write-ups — in Claude Docs, and get a shareable link when the draft is ready.",
+      "category": "productivity"
     }
   ]
 }
