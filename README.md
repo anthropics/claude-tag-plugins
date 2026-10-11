@@ -69,7 +69,8 @@ well-formed and may hold placeholder values.
 
 ## Security Considerations
 
-The bundled scripts use `Authorization: Bearer ${TOKEN}` headers. When run **outside** the
+The bundled scripts reference credentials only through placeholder environment variables; the
+runtime injects the real credentials into each request. When run **outside** the
 credential-injecting runtime (e.g. local development or CI without secrets configured), the
 token variable will be unset or hold a placeholder — requests will be rejected with `401`.
 Never commit real credentials; configure them through your runtime's secret injection

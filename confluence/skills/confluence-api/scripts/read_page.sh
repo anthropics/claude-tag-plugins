@@ -28,9 +28,10 @@ options:
   -h, --help     show this help
 
 environment:
-  CONFLUENCE_BASE      https://YOURSITE.atlassian.net/wiki — required, must include /wiki
-  ATLASSIAN_EMAIL      basic-auth user; injected by the runtime, placeholder default is fine
-  ATLASSIAN_API_TOKEN  basic-auth token; injected by the runtime, placeholder default is fine
+  CONFLUENCE_BASE      required, ends in /wiki: https://YOURSITE.atlassian.net/wiki, or the gateway
+                       https://api.atlassian.com/ex/confluence/<cloud-id>/wiki for service accounts
+  ATLASSIAN_EMAIL      auth user placeholder; the runtime injects real credentials
+  ATLASSIAN_API_TOKEN  auth token placeholder; the runtime injects real credentials
 
 output:
   the page body on stdout (html, or stripped text with --text); with --json a single json object
@@ -70,7 +71,7 @@ while [ $# -gt 0 ]; do
   esac
 done
 
-[ -n "$BASE" ] || { err "set CONFLUENCE_BASE (https://YOURSITE.atlassian.net/wiki)"; exit 1; }
+[ -n "$BASE" ] || { err "set CONFLUENCE_BASE (https://YOURSITE.atlassian.net/wiki or https://api.atlassian.com/ex/confluence/<cloud-id>/wiki)"; exit 1; }
 BASE="${BASE%/}"
 case "$PAGE_ID" in
   '') err "no page id given (see --help)"; exit 1 ;;

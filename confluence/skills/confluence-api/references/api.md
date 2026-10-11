@@ -1,12 +1,13 @@
 # Confluence Cloud REST API — Endpoint Reference
 
-All requests go to `${CONFLUENCE_BASE}` (your site's `/wiki` root, e.g.
-`https://your-domain.atlassian.net/wiki`) with:
+All requests go to `${CONFLUENCE_BASE}` — the site's `/wiki` root
+(`https://your-domain.atlassian.net/wiki`) or, for service-account tokens, the API gateway's
+(`https://api.atlassian.com/ex/confluence/<cloud-id>/wiki`) — with:
 
 ```
-Authorization: Basic <base64(email:api_token)>      # curl -u handles this
+Authorization: ...              # injected by the runtime (Basic for site tokens, Bearer for gateway/service-account tokens)
 Accept: application/json
-Content-Type: application/json                      # on any request with a body
+Content-Type: application/json  # on any request with a body
 ```
 
 v2 API is under `/api/v2/`; v1 (legacy + CQL search) is under `/rest/api/`. Official docs:
