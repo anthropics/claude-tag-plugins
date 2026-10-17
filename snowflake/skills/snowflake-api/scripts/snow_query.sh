@@ -34,7 +34,8 @@ environment:
   SNOWFLAKE_ACCOUNT     account identifier, e.g. xy12345.us-east-1 (required unless
                         SNOWFLAKE_BASE_URL is set)
   SNOWFLAKE_TOKEN       bearer token; injected by the runtime, so the placeholder default is fine
-  SNOWFLAKE_TOKEN_TYPE  X-Snowflake-Authorization-Token-Type header (default OAUTH)
+  SNOWFLAKE_TOKEN_TYPE  X-Snowflake-Authorization-Token-Type header (default
+                        PROGRAMMATIC_ACCESS_TOKEN; set to OAUTH for OAuth tokens)
   SNOWFLAKE_BASE_URL    api root override (default https://<account>.snowflakecomputing.com)
 
 output:
@@ -59,7 +60,7 @@ if [ -z "$BASE_URL" ] && [ -n "$ACCOUNT" ]; then
   BASE_URL="https://${ACCOUNT}.snowflakecomputing.com"
 fi
 TOKEN="${SNOWFLAKE_TOKEN:-placeholder}"
-TOKEN_TYPE="${SNOWFLAKE_TOKEN_TYPE:-OAUTH}"
+TOKEN_TYPE="${SNOWFLAKE_TOKEN_TYPE:-PROGRAMMATIC_ACCESS_TOKEN}"
 
 WAREHOUSE=""
 DATABASE=""
