@@ -19,22 +19,24 @@ notified, when, and on which channel.
 
 Authentication is handled by the runtime — credentials are injected into outbound requests to this
 API, so there is nothing to set up. Do not try to create, mint, refresh, or validate tokens or keys.
-Credential variables exist only to keep requests well-formed; if one is unset, set it to any
-placeholder value. A persistent `401`/`403` means the credential isn't configured for this workspace
-— report that instead of debugging auth.
+Credential variables exist only to keep requests well-formed; if one is **unset**, give it any
+placeholder value. Never overwrite a variable that is already set: a real token in the environment
+must be used as-is, so assign a default only when the variable is empty (`${VAR:=placeholder}`),
+never with a plain `export VAR=placeholder`. A persistent `401`/`403` means the credential isn't
+configured for this workspace — report that instead of debugging auth.
 
 **REST API** (`api.pagerduty.com`) — header on every request is `Authorization: Token token=<t>`
 (neither Bearer nor Basic):
 
 ```bash
-export PAGERDUTY_TOKEN="placeholder"   # injected by the runtime; any value works
+: "${PAGERDUTY_TOKEN:=placeholder}"   # injected by the runtime; only defaults when unset
 ```
 
 **Events API v2** (`events.pagerduty.com`) — addressed by an integration **routing key** (32 hex
 chars) in the request **body**. No `Authorization` header.
 
 ```bash
-export PD_ROUTING_KEY="placeholder"   # injected by the runtime; any value works
+: "${PD_ROUTING_KEY:=placeholder}"   # injected by the runtime; only defaults when unset
 ```
 
 **Sanity check** — confirm the workspace is wired up:
