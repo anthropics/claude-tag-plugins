@@ -27,6 +27,13 @@
       "category": "project-management"
     },
     {
+      "name": "coralogix",
+      "displayName": "Coralogix",
+      "source": "./coralogix",
+      "description": "Query Coralogix logs, metrics, and spans with the official CX CLI.",
+      "category": "observability"
+    },
+    {
       "name": "datadog",
       "displayName": "Datadog",
       "source": "./datadog",

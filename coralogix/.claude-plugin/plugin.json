@@ -1,0 +1,7 @@
+{
+  "name": "coralogix",
+  "version": "1.0.0",
+  "description": "Query Coralogix logs, metrics, and spans with the official CX CLI.",
+  "author": { "name": "Anthropic" },
+  "homepage": "https://github.com/anthropics/claude-tag-plugins"
+}
