@@ -1,7 +1,7 @@
 {
   "name": "coralogix",
-  "version": "1.0.0",
-  "description": "Query Coralogix logs, metrics, and spans with the official CX CLI.",
+  "version": "1.1.0",
+  "description": "Access Coralogix DataPrime, PromQL metrics, profiling, dashboards, views, cases, infrastructure, data usage, alerts, SLOs, and configuration APIs.",
   "author": { "name": "Anthropic" },
   "homepage": "https://github.com/anthropics/claude-tag-plugins"
 }

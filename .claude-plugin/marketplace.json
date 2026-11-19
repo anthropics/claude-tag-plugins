@@ -30,7 +30,7 @@
       "name": "coralogix",
       "displayName": "Coralogix",
       "source": "./coralogix",
-      "description": "Query Coralogix logs, metrics, and spans with the official CX CLI.",
+      "description": "Access Coralogix DataPrime, PromQL metrics, profiling, dashboards, views, cases, infrastructure, data usage, alerts, SLOs, and configuration APIs.",
       "category": "observability"
     },
     {
