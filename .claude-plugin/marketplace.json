@@ -27,6 +27,13 @@
       "category": "project-management"
     },
     {
+      "name": "coralogix",
+      "displayName": "Coralogix",
+      "source": "./coralogix",
+      "description": "Access Coralogix DataPrime, PromQL metrics, profiling, dashboards, views, cases, infrastructure, data usage, alerts, SLOs, and configuration APIs.",
+      "category": "observability"
+    },
+    {
       "name": "datadog",
       "displayName": "Datadog",
       "source": "./datadog",

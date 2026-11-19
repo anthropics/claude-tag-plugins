@@ -13,6 +13,7 @@ Each service is its own plugin, so a workspace can connect exactly the services 
 | **[claude-tag-oncall](./claude-tag-oncall)** | Oncall for @Claude in Slack — alert triage, incident investigation, sitreps, postmortems, rotation handoff |
 | **[claude-tag-troubleshoot](./claude-tag-troubleshoot)** | Configure and debug @Claude agents — agent scopes, profiles, connections, plugin/skill loading |
 | **[confluence](./confluence)** | Search pages, read/create/update content, spaces, comments |
+| **[coralogix](./coralogix)** | DataPrime logs, spans, and RUM; PromQL metrics and profiling; dashboards, views, cases, infrastructure, data usage, alerts, SLOs, and configuration APIs |
 | **[datadog](./datadog)** | Logs, metrics, monitors, dashboards, SLOs, events, traces, incidents |
 | **[enterprise-search](./enterprise-search)** | Search across all connected sources, read documents, submit relevance feedback |
 | **[google-drive](./google-drive)** | Search, read, upload, share files; folders; Docs/Sheets export |
@@ -38,6 +39,7 @@ claude plugin marketplace add anthropics/claude-tag-plugins
 # Install the services you use
 claude plugin install jira@claude-tag-plugins
 claude plugin install datadog@claude-tag-plugins
+claude plugin install coralogix@claude-tag-plugins
 ```
 
 Once installed, skills activate automatically when relevant.
